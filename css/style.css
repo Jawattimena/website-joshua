@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Gilmer Bold' ;
+  src: url(fonts/Gilmer\ Bold.otf);
+}
+
+@font-face {
+  font-family: 'Gilmer Medium' ;
+  src: url(fonts/Gilmer\ Medium.otf);
+}
+
+@font-face {
+  font-family: 'Gilmer Light' ;
+  src: url(fonts/Gilmer\ Light.otf);
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+}
+
+header {  
+  margin: 4em 4em 4em 4em;
+}
+
+h1 {
+  font-family: Gilmer Bold ;
+  font-size: 2em;
+}
+
+nav {
+  float: right;
+}
+
+nav a{  
+  font-family: Gilmer Bold;
+  text-decoration: none;
+  font-size: 1em;
+  color: black;
+  margin: 0.3em;
+  }
+
+nav a:hover{  
+  text-decoration: underline;
+}
+
+.item1 {
+  grid-area: header;
+}
+  
+.item2 {
+  grid-area: menu;
+}
+
+.item3 {
+  grid-area: main;
+}
+
+.item4 {
+  grid-area: footer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu main main main'
+    'menu menu menu main main main'
+    'footer footer footer footer footer footer ';
+  gap: 10px;
+}
+
+.grid-container>div {
+  text-align: fill;
+  display: flex;
+  justify-self: center;
+  /* border: 3px solid black; */
+}
+  
+.Over-mij {
+  display: flex;
+  justify-content: center;
+}
+
+.Over-mij p{
+    
+    font-family: Gilmer Light;
+    letter-spacing: 1px;
+    width: 30vw;
+    margin:  5em
+  }
+
+.Over-mij img{
+  margin-left:  5em ;
+  width: 20vw;
+}
+
