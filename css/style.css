@@ -1,3 +1,5 @@
+/* Algemeen */
+
 * {
   box-sizing: border-box;
 }
@@ -24,6 +26,9 @@ html,body {
 
 header {  
   margin: 4em 4em 4em 4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 h1 {
@@ -31,58 +36,63 @@ h1 {
   font-size: 2em;
 }
 
-nav {
-  float: right;
-}
 
 nav a{  
-  font-family: Gilmer Bold;
   text-decoration: none;
-  font-size: 1em;
+  font-family: gilmer bold;
   color: black;
+  font-size: 1em;
   margin: 0.3em;
+
   }
 
 nav a:hover{  
   text-decoration: underline;
 }
 
-.item1 {
-  grid-area: header;
-}
-  
-.item2 {
-  grid-area: menu;
+nav a:active{  
+  text-decoration: underline;
 }
 
-.item3 {
-  grid-area: main;
-}
 
-.item4 {
-  grid-area: footer;
-}
+/* home */
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu menu menu main main main'
-    'menu menu menu main main main'
-    'footer footer footer footer footer footer ';
-  gap: 10px;
-}
-
-.grid-container>div {
-  text-align: fill;
+.grid{
   display: flex;
-  justify-self: center;
-  /* border: 3px solid black; */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0em 2em 0em 2em;
 }
+
+.grid a{
+  padding: 0;
+  padding-bottom: 0;
   
+}
+
+.grid img{
+  height: 50vh;
+  margin-left: 0.15em;
+  margin-right: 0.15em;
+
+}
+
+.grid img:hover{
+  opacity: 50%;
+  transition: 0.5s;
+}
+
+.grid img:active{
+  opacity: 50%;
+  transition: 0.5s;
+}
+
+/* over mij */
+
 .Over-mij {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .Over-mij p{
@@ -98,3 +108,41 @@ nav a:hover{
   width: 20vw;
 }
 
+/* afbeeldingen */
+
+.article-afbeeldingen{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+  width: 90em;
+}
+
+/* 
+.horizontal{
+ width: 90vw;
+ margin-left: auto;
+ margin-right: auto;
+} */
+
+.vertical{
+  height: 80vh;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.article-text{
+  margin-left: 10em;
+  margin-top: 3em;
+  width: 50vw;
+}
+ 
+
+.article-text h2{
+  font-family: gilmer bold;
+}
+
+.article-text p{
+  font-family: gilmer light;
+}
